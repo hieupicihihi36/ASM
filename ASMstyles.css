@@ -1,0 +1,330 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY + BACKGROUND ===== */
+body {
+    padding-top: 80px; /* chừa header fixed */
+    color: #e8f5e9;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== BACKGROUND IMAGE (BLUR) ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(8px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* ===== DARK OVERLAY ===== */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(27, 94, 32, 0.95);
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -20px; /* 👈 xích về trái */
+}
+
+.nav a {
+    color: #c8e6c9;
+    margin-left: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #ffeb3b;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section {
+    margin: 40px 0;
+}
+
+h2 {
+    color: #a5d6a7;
+    margin-bottom: 16px;
+}
+
+/* ===== TABLE ===== */
+.modpack-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(232, 245, 233, 0.95);
+    color: #1b5e20;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modpack-table th,
+.modpack-table td {
+    border: 2px solid #1b5e20;
+    padding: 12px;
+    vertical-align: top;
+}
+
+.modpack-table th {
+    background: #2e7d32;
+    color: #ffffff;
+    text-align: left;
+}
+
+.modpack-table tr:hover {
+    background: #c8e6c9;
+}
+
+.modpack-table img {
+    width: 180px;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    border: 2px solid #2e7d32;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: rgba(13, 59, 38, 0.95);
+    color: #c8e6c9;
+    text-align: center;
+    padding: 16px;
+    margin-top: 40px;
+    font-size: 14px;
+    box-shadow: #94a3b8;
+    background-color: #000000;
+}
+
+.modpack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.modpack-card {
+    background: rgba(232, 245, 233, 0.95);
+    color: #1b5e20;
+    border: 3px solid #2e7d32;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modpack-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.modpack-card img {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 12px;   /* căn giữa ảnh */
+    display: block;
+}
+.modpack-card h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ===== DETAIL (ẨN / HIỆN) ===== */
+.modpack-detail {
+    display: none;
+    margin-top: 10px;
+}
+
+.modpack-detail a {
+    display: inline-block;
+    margin-top: 6px;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.modpack-card.active .modpack-detail {
+    display: block;
+}
+
+/* ===== CARD CHUNG ===== */
+.modpack-card {
+    background: rgba(232, 245, 233, 0.95);
+    color: #1b5e20;
+    border: 3px solid #2e7d32;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.25s,
+        background-color 0.25s,
+        border-color 0.25s;
+}
+
+.modpack-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== RLCraft – ĐỎ (NGUY HIỂM) ===== */
+.modpack-card.rlcraft:hover {
+    background: #ffebee;
+    border-color: #d32f2f;
+    box-shadow: 0 0 18px rgba(211, 47, 47, 0.7);
+}
+
+.modpack-card.rlcraft:hover h3 {
+    color: #b71c1c;
+}
+
+/* ===== SkyFactory – XANH TRỜI ===== */
+.modpack-card.skyfactory:hover {
+    background: #e3f2fd;
+    border-color: #1976d2;
+    box-shadow: 0 0 18px rgba(25, 118, 210, 0.7);
+}
+
+.modpack-card.skyfactory:hover h3 {
+    color: #0d47a1;
+}
+
+/* ===== SevTech – TÍM CÔNG NGHỆ ===== */
+.modpack-card.sevtech:hover {
+    background: #f3e5f5;
+    border-color: #7b1fa2;
+    box-shadow: 0 0 18px rgba(123, 31, 162, 0.7);
+}
+
+.modpack-card.sevtech:hover h3 {
+    color: #4a148c;
+}
+
+/* ===== Enigmatica – XANH LÁ PHÉP THUẬT (FIX) ===== */
+.modpack-card.enigmatica:hover {
+    background: #c8e6c9;            /* xanh đậm hơn */
+    border-color: #1b5e20;          /* xanh đậm rõ */
+    box-shadow: 0 0 20px rgba(27, 94, 32, 0.8);
+}
+
+.modpack-card.enigmatica:hover h3 {
+    color: #0d3b26;
+}
+
+/* ===== MAP DƯỚI FOOTER ===== */
+.map-footer {
+    display: flex;
+    justify-content: flex-end; /* đẩy sang phải */
+    padding: 16px 5%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.map-footer iframe {
+    width: 320px;
+    height: 200px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+/* ===== VIDEO MODAL ===== */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.video-content {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.video-content iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ===== VIDEO EMBED TRONG CARD ===== */
+.video-embed {
+    margin-top: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+}

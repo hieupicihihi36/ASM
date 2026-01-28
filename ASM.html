@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Modpacks</title>
+    <link rel="icon" type="image/png" href="images/logomc.png">
+    <link rel="stylesheet" href="ASMstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<script>
+function toggleDetail(card) {
+    card.classList.toggle("active");
+}
+</script>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <a href="ASM.html">
+                <img src="images/logomc.png" alt="Minecraft">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="#">Giới thiệu</a>
+            <a href="#">Modpack</a>
+            <a href="#">Liên hệ</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Hỏi / Đáp</a>
+        </nav>
+    </div>
+</header>
+
+<!-- GIỚI THIỆU -->
+<div class="container section">
+    <h2>Giới thiệu</h2>
+    <p>
+        Modpack Minecraft là tập hợp nhiều mod được kết hợp sẵn nhằm mở rộng và thay đổi hoàn toàn
+        lối chơi gốc của Minecraft.
+    </p>
+    <p>
+        Mỗi modpack mang lại trải nghiệm sinh tồn, công nghệ, phép thuật hoặc phiêu lưu độc đáo.
+    </p>
+</div>
+
+<!-- MODPACK -->
+<div class="container section">
+    <h2>Những Modpack Nổi Tiếng</h2>
+
+    <div class="modpack-grid">
+
+        <!-- RLCraft -->
+        <div class="modpack-card rlcraft" onclick="toggleDetail(this)">
+            <img src="images/rlcraft.jpg" alt="RLCraft">
+            <h3>RLCraft</h3>
+
+            <div class="modpack-detail">
+                <p><b>Giới thiệu:</b> Modpack sinh tồn cực khó</p>
+                <p><b>Mô tả:</b> RPG, khát nước, nhiệt độ</p>
+                <p><b>Độ khó:</b> ★★★★★</p>
+
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/tbRAUWNf-2Y"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- SkyFactory -->
+        <div class="modpack-card skyfactory" onclick="toggleDetail(this)">
+            <img src="images/skyfactory.jpg" alt="SkyFactory">
+            <h3>SkyFactory</h3>
+
+            <div class="modpack-detail">
+                <p><b>Giới thiệu:</b> Sinh tồn trên đảo bay</p>
+                <p><b>Mô tả:</b> Tạo tài nguyên từ số 0</p>
+                <p><b>Độ khó:</b> ★★★☆☆</p>
+
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/4mYI1bH5y6A"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- SevTech -->
+        <div class="modpack-card sevtech" onclick="toggleDetail(this)">
+            <img src="images/sevtech.jpg" alt="SevTech Ages">
+            <h3>SevTech Ages</h3>
+
+            <div class="modpack-detail">
+                <p><b>Giới thiệu:</b> Tiến hóa qua thời đại</p>
+                <p><b>Mô tả:</b> Từ đồ đá đến công nghệ cao</p>
+                <p><b>Độ khó:</b> ★★★★☆</p>
+
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/GxkqZ6Q9K1A"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enigmatica -->
+        <div class="modpack-card enigmatica" onclick="toggleDetail(this)">
+            <img src="images/enigmatica.jpg" alt="Enigmatica 2">
+            <h3>Enigmatica 2</h3>
+
+            <div class="modpack-detail">
+                <p><b>Giới thiệu:</b> Sinh tồn + công nghệ + phép thuật</p>
+                <p><b>Mô tả:</b> Quest rõ ràng</p>
+                <p><b>Độ khó:</b> ★★★★☆</p>
+
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/R2U9Z8Zs5mU"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="site-footer">
+    © 2026 - Web giới thiệu Modpack Minecraft
+</footer>
+
+</body>
+</html>
