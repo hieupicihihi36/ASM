@@ -1,137 +1,185 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Minecraft Modpacks</title>
-    <link rel="icon" type="image/png" href="images/logomc.png">
-    <link rel="stylesheet" href="ASMstyles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&display=swap" rel="stylesheet">
-</head>
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minecraft Modpacks</title>
+        <link rel="icon" type="image/png" href="images/logomc.png">
+        <link rel="stylesheet" href="ASMstyles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </head>
 
-<script>
-function toggleDetail(card) {
-    card.classList.toggle("active");
-}
-</script>
+    <script>
+    function toggleDetail(card) {
+        card.classList.toggle("active");
+    }
+    </script>
 
-<body>
+    <body>
 
-<header class="site-header">
-    <div class="container header-flex">
-        <div class="logo">
-            <a href="ASM.html">
-                <img src="images/logomc.png" alt="Minecraft">
-            </a>
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="ASM.html">
+                    <img src="images/logomc.png" alt="Minecraft">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <a href="#">Giới thiệu</a>
+                <a href="#">Modpack</a>
+                <a href="#">Liên hệ</a>
+                <a href="#sitemap">Sitemap</a>
+                <a href="#">Hỏi / Đáp</a>
+            </nav>
         </div>
+    </header>
 
-        <nav class="nav">
-            <a href="D:\Study\TAILIEU_D\WEB\lab5\lab5.html">Giới thiệu</a>
-            <a href="#">Modpack</a>
-            <a href="#">Liên hệ</a>
-            <a href="#">Sitemap</a>
-            <a href="D:\Study\TAILIEU_D\WEB\lab6\lab6.html">Hỏi / Đáp</a>
-        </nav>
-    </div>
-</header>
+    <!-- VANILLA -->
+    <div class="container section" id="vanilla">
+        <h2 class="section-title">VANILLA</h2>
 
-<!-- GIỚI THIỆU -->
-<div class="container section">
-    <h2>Giới thiệu</h2>
-    <p>
-        Modpack Minecraft là tập hợp nhiều mod được kết hợp sẵn nhằm mở rộng và thay đổi hoàn toàn
-        lối chơi gốc của Minecraft.
-    </p>
-    <p>
-        Mỗi modpack mang lại trải nghiệm sinh tồn, công nghệ, phép thuật hoặc phiêu lưu độc đáo.
-    </p>
+        <p>
+            <b>Minecraft Vanilla</b> là phiên bản gốc của Minecraft do Mojang phát triển,
+            không cài đặt thêm mod nào.
+            Người chơi trải nghiệm gameplay nguyên bản gồm sinh tồn, sáng tạo,
+            chiến đấu và khám phá các chiều không gian khác nhau.
+        </p>
+
+<div class="vanilla-grid">
+
+    <a class="vanilla-card" href="vanilla-armor.html">
+        <h3>🛡️ Armor</h3>
+        <p>Trang bị bảo vệ nhân vật trong Vanilla.</p>
+    </a>
+
+    <a class="vanilla-card" href="vanilla-weapon.html">
+        <h3>⚔️ Weapon</h3>
+        <p>Kiếm, cung, nỏ, rìu.</p>
+    </a>
+
+    <a class="vanilla-card" href="vanilla-ore.html">
+        <h3>⛏️ Ore</h3>
+        <p>Tài nguyên chế tạo.</p>
+    </a>
+
+    <a class="vanilla-card" href="vanilla-pet.html">
+        <h3>🐾 Pet</h3>
+        <p>Chó, mèo, ngựa.</p>
+    </a>
+
+    <a class="vanilla-card" href="vanilla-mob.html">
+        <h3>👾 Mob</h3>
+        <p>Sinh vật & quái.</p>
+    </a>
+
+    <a class="vanilla-card" href="vanilla-dimension.html">
+        <h3>🌌 Dimension</h3>
+        <p>Các chiều không gian.</p>
+    </a>
+
 </div>
 
-<!-- MODPACK -->
-<div class="container section">
-    <h2>Những Modpack Nổi Tiếng</h2>
 
-    <div class="modpack-grid">
 
-        <!-- RLCraft -->
-        <div class="modpack-card rlcraft" onclick="toggleDetail(this)">
-            <img src="images/rlcraft.jpg" alt="RLCraft">
-            <h3>RLCraft</h3>
+    <!-- MODPACK -->
+    <div class="container section">
+        <h2 class="section-title">MODPACK NỔI TIẾNG</h2>
 
-            <div class="modpack-detail">
-                <p><b>Giới thiệu:</b> Modpack sinh tồn cực khó</p>
-                <p><b>Mô tả:</b> RPG, khát nước, nhiệt độ</p>
-                <p><b>Độ khó:</b> ★★★★★</p>
+        <div class="modpack-grid">
 
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/tbRAUWNf-2Y"
-                        allowfullscreen>
-                    </iframe>
+            <!-- RLCraft -->
+            <div class="modpack-card rlcraft" onclick="toggleDetail(this)">
+                <img src="images/rlcraft.jpg" alt="RLCraft">
+                <h3>RLCraft</h3>
+
+                <div class="modpack-detail">
+                    <p><b>Giới thiệu:</b> Modpack sinh tồn cực khó</p>
+                    <p><b>Mô tả:</b> RPG, khát nước, nhiệt độ</p>
+                    <p><b>Độ khó:</b> ★★★★★</p>
+
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/tbRAUWNf-2Y"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- SkyFactory -->
-        <div class="modpack-card skyfactory" onclick="toggleDetail(this)">
-            <img src="images/skyfactory.jpg" alt="SkyFactory">
-            <h3>SkyFactory</h3>
+            <!-- SkyFactory -->
+            <div class="modpack-card skyfactory" onclick="toggleDetail(this)">
+                <img src="images/skyfactory.jpg" alt="SkyFactory">
+                <h3>SkyFactory</h3>
 
-            <div class="modpack-detail">
-                <p><b>Giới thiệu:</b> Sinh tồn trên đảo bay</p>
-                <p><b>Mô tả:</b> Tạo tài nguyên từ số 0</p>
-                <p><b>Độ khó:</b> ★★★☆☆</p>
+                <div class="modpack-detail">
+                    <p><b>Giới thiệu:</b> Sinh tồn trên đảo bay</p>
+                    <p><b>Mô tả:</b> Tạo tài nguyên từ số 0</p>
+                    <p><b>Độ khó:</b> ★★★☆☆</p>
 
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/4mYI1bH5y6A"
-                        allowfullscreen>
-                    </iframe>
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/4mYI1bH5y6A"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- SevTech -->
-        <div class="modpack-card sevtech" onclick="toggleDetail(this)">
-            <img src="images/sevtech.jpg" alt="SevTech Ages">
-            <h3>SevTech Ages</h3>
+            <!-- SevTech -->
+            <div class="modpack-card sevtech" onclick="toggleDetail(this)">
+                <img src="images/sevtech.jpg" alt="SevTech Ages">
+                <h3>SevTech Ages</h3>
 
-            <div class="modpack-detail">
-                <p><b>Giới thiệu:</b> Tiến hóa qua thời đại</p>
-                <p><b>Mô tả:</b> Từ đồ đá đến công nghệ cao</p>
-                <p><b>Độ khó:</b> ★★★★☆</p>
+                <div class="modpack-detail">
+                    <p><b>Giới thiệu:</b> Tiến hóa qua thời đại</p>
+                    <p><b>Mô tả:</b> Từ đồ đá đến công nghệ cao</p>
+                    <p><b>Độ khó:</b> ★★★★☆</p>
 
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/GxkqZ6Q9K1A"
-                        allowfullscreen>
-                    </iframe>
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/GxkqZ6Q9K1A"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Enigmatica -->
-        <div class="modpack-card enigmatica" onclick="toggleDetail(this)">
-            <img src="images/enigmatica.jpg" alt="Enigmatica 2">
-            <h3>Enigmatica 2</h3>
+            <!-- Enigmatica -->
+            <div class="modpack-card enigmatica" onclick="toggleDetail(this)">
+                <img src="images/enigmatica.jpg" alt="Enigmatica 2">
+                <h3>Enigmatica 2</h3>
 
-            <div class="modpack-detail">
-                <p><b>Giới thiệu:</b> Sinh tồn + công nghệ + phép thuật</p>
-                <p><b>Mô tả:</b> Quest rõ ràng</p>
-                <p><b>Độ khó:</b> ★★★★☆</p>
+                <div class="modpack-detail">
+                    <p><b>Giới thiệu:</b> Sinh tồn + công nghệ + phép thuật</p>
+                    <p><b>Mô tả:</b> Quest rõ ràng</p>
+                    <p><b>Độ khó:</b> ★★★★☆</p>
 
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/R2U9Z8Zs5mU"
-                        allowfullscreen>
-                    </iframe>
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/R2U9Z8Zs5mU"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
-        </div>
 
+        </div>
+    </div>          
+
+    <!-- ===== FOOTER + MAP (GIỮ NGUYÊN) ===== -->
+<footer class="site-footer" id="sitemap">
+    <div class="footer-text">
+        © 2026 - Web giới thiệu Modpack Minecraft
     </div>
-</div>
 
-<footer class="site-footer">
-    © 2026 - Web giới thiệu Modpack Minecraft
+    <div class="map-footer">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.966127888972!2d106.6032147737362!3d10.813904058503981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1sen!2s!4v1769586740682!5m2!1sen!2s"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 </footer>
 
-</body>
-</html>
 
-
+    </body>
+    </html>
+    
