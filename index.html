@@ -1,83 +1,91 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Minecraft Modpacks</title>
-    <link rel="icon" type="image/png" href="imagesG/logomc.png">
-    <link rel="stylesheet" href="ASMstyles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minecraft Modpacks</title>
+        <link rel="icon" type="image/png" href="images/logomc.png">
+        <link rel="stylesheet" href="ASMstyles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
-</head>
+    </head>
 
-<script>
-function toggleDetail(card) {
-    card.classList.toggle("active");
-}
-</script>
+    <script>
+    function toggleDetail(card) {
+        card.classList.toggle("active");
+    }
+    </script>
 
-<body>
+    <body>
 
-<header class="site-header">
-    <div class="container header-flex">
-        <div class="logo">
-            <a href="ASM.html">
-                <img src="imagesG/logomc.png" alt="Minecraft">
-            </a>
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="ASM.html">
+                    <img src="images/logomc.png" alt="Minecraft">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <a href="#vanilla">Vanilla</a>
+                <a href="#modpack">Modpack</a>
+                <a href="lienhe.html">Liên hệ</a>
+                <a href="#sitemap">Sitemap</a>
+            </nav>
         </div>
+    </header>
 
-        <nav class="nav">
-            <a href="#vanilla">Vanilla</a>
-            <a href="#modpack">Modpack</a>
-            <a href="lienhe.html">Liên hệ</a>
-            <a href="#sitemap">Sitemap</a>
-        </nav>
-    </div>
-</header>
+    <!-- VANILLA -->
+    <div class="container section" id="vanilla">
+        <h2 class="section-title">VANILLA</h2>
 
-<!-- VANILLA -->
-<div class="container section" id="vanilla">
-    <h2 class="section-title">VANILLA</h2>
+        <p>
+            <b>Minecraft Vanilla</b> là phiên bản gốc của Minecraft do Mojang phát triển,
+            không cài đặt thêm mod nào.
+            Người chơi trải nghiệm gameplay nguyên bản gồm sinh tồn, sáng tạo,
+            chiến đấu và khám phá các chiều không gian khác nhau.
+        </p>
 
-    <p>
-        <b>Minecraft Vanilla</b> là phiên bản gốc của Minecraft do Mojang phát triển,
-        không cài đặt thêm mod nào.
-        Người chơi trải nghiệm gameplay nguyên bản gồm sinh tồn, sáng tạo,
-        chiến đấu và khám phá các chiều không gian khác nhau.
-    </p>
+<div class="vanilla-grid">
 
-    <div class="vanilla-grid">
-        <a class="vanilla-card" href="vanilla-armor.html">
-            <h3>🛡️ Armors</h3>
-            <p>Trang bị bảo vệ nhân vật trong Vanilla.</p>
-        </a>
+    <a class="vanilla-card" href="vanilla-armor.html">
+        <h3>🛡️ Armors</h3>
+        <p>Trang bị bảo vệ nhân vật trong Vanilla.</p>
+    </a>
 
-        <a class="vanilla-card" href="vanilla-tools.html">
-            <h3>⚔️ Tools</h3>
-            <p>Kiếm, cung, nỏ, rìu.</p>
-        </a>
+    <a class="vanilla-card" href="vanilla-tools.html">
+        <h3>⚔️ Tools</h3>
+        <p>Kiếm, cung, nỏ, rìu.</p>
+    </a>
 
-        <a class="vanilla-card" href="vanilla-ore.html">
-            <h3>⛏️ Ores</h3>
-            <p>Tài nguyên chế tạo.</p>
-        </a>
+    <a class="vanilla-card" href="vanilla-ore.html">
+        <h3>⛏️ Ores</h3>
+        <p>Tài nguyên chế tạo.</p>
+    </a>
 
-        <a class="vanilla-card" href="vanilla-mobs.html">
-            <h3>👾 Mobs</h3>
-            <p>Sinh vật & quái.</p>
-        </a>
-    </div>
+    <a class="vanilla-card" href="vanilla-mobs.html">
+        <h3>👾 Mobs</h3>
+        <p>Sinh vật & quái.</p>
+    </a>
+
+    <a class="vanilla-card" href="vanilla-dimensions.html">
+        <h3>🌌 Dimensions</h3>
+        <p>Các chiều không gian.</p>
+    </a>
+
 </div>
 
-<!-- MODPACK -->
-<div class="container section" id="modpack">
+
+
+    <!-- MODPACK -->
+    <div class="container section" id="modpack">
     <h2 class="section-title">MODPACK NỔI TIẾNG</h2>
 
     <div class="modpack-grid">
 
         <!-- RLCraft -->
         <a class="modpack-card rlcraft" href="rlcraft.html">
-            <img src="imagesG/rlcraft.jpg" alt="RLCraft">
+            <img src="images/rlcraft.jpg" alt="RLCraft">
             <h3>RLCraft</h3>
             <p>Sinh tồn cực khó, RPG, khát nước, nhiệt độ.</p>
             <span class="difficulty">Độ khó: ★★★★★</span>
@@ -85,7 +93,7 @@ function toggleDetail(card) {
 
         <!-- SkyFactory -->
         <a class="modpack-card skyfactory" href="skyfactory.html">
-            <img src="imagesG/skyfactory.gif" alt="SkyFactory">
+            <img src="images/skyfactory.gif" alt="SkyFactory">
             <h3>SkyFactory</h3>
             <p>Sinh tồn trên đảo bay, tạo tài nguyên từ số 0.</p>
             <span class="difficulty">Độ khó: ★★★☆☆</span>
@@ -93,7 +101,7 @@ function toggleDetail(card) {
 
         <!-- All The Mods -->
         <a class="modpack-card atm" href="allthemod.html">
-            <img src="imagesG/allthemod.jpg" alt="All The Mods">
+            <img src="images/allthemod.jpg" alt="All The Mods">
             <h3>All The Mods</h3>
             <p>Modpack tổng hợp công nghệ + phép thuật.</p>
             <span class="difficulty">Độ khó: ★★★★☆</span>
@@ -101,7 +109,7 @@ function toggleDetail(card) {
 
         <!-- DawnCraft -->
         <a class="modpack-card dawncraft" href="dawncraft.html">
-            <img src="imagesG/dawncraft.gif" alt="DawnCraft">
+            <img src="images/dawncraft.gif" alt="DawnCraft">
             <h3>DawnCraft</h3>
             <p>RPG thế giới mở, boss, nhiệm vụ, phong cách Souls-like.</p>
             <span class="difficulty">Độ khó: ★★★★☆</span>
@@ -109,8 +117,10 @@ function toggleDetail(card) {
 
     </div>
 </div>
+        </div>
+         
 
-<!-- FOOTER -->
+    <!-- ===== FOOTER + MAP (GIỮ NGUYÊN) ===== -->
 <footer class="site-footer" id="sitemap">
     <div class="footer-text">
         © 2026 - Web giới thiệu Modpack Minecraft
@@ -125,5 +135,7 @@ function toggleDetail(card) {
     </div>
 </footer>
 
-</body>
-</html>
+
+    </body>
+    </html>
+    
