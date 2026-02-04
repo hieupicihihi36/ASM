@@ -27,11 +27,10 @@
             </div>
 
             <nav class="nav">
-                <a href="#">Giới thiệu</a>
-                <a href="#">Modpack</a>
-                <a href="#">Liên hệ</a>
+                <a href="#vanilla">Vanilla</a>
+                <a href="#modpack">Modpack</a>
+                <a href="lienhe.html">Liên hệ</a>
                 <a href="#sitemap">Sitemap</a>
-                <a href="#">Hỏi / Đáp</a>
             </nav>
         </div>
     </header>
@@ -50,119 +49,70 @@
 <div class="vanilla-grid">
 
     <a class="vanilla-card" href="vanilla-armor.html">
-        <h3>🛡️ Armor</h3>
+        <h3>🛡️ Armors</h3>
         <p>Trang bị bảo vệ nhân vật trong Vanilla.</p>
     </a>
 
-    <a class="vanilla-card" href="vanilla-weapon.html">
-        <h3>⚔️ Weapon</h3>
+    <a class="vanilla-card" href="vanilla-tools.html">
+        <h3>⚔️ Tools</h3>
         <p>Kiếm, cung, nỏ, rìu.</p>
     </a>
 
     <a class="vanilla-card" href="vanilla-ore.html">
-        <h3>⛏️ Ore</h3>
+        <h3>⛏️ Ores</h3>
         <p>Tài nguyên chế tạo.</p>
     </a>
 
-    <a class="vanilla-card" href="vanilla-pet.html">
-        <h3>🐾 Pet</h3>
-        <p>Chó, mèo, ngựa.</p>
-    </a>
-
-    <a class="vanilla-card" href="vanilla-mob.html">
-        <h3>👾 Mob</h3>
+    <a class="vanilla-card" href="vanilla-mobs.html">
+        <h3>👾 Mobs</h3>
         <p>Sinh vật & quái.</p>
     </a>
-
-    <a class="vanilla-card" href="vanilla-dimension.html">
-        <h3>🌌 Dimension</h3>
-        <p>Các chiều không gian.</p>
-    </a>
-
 </div>
 
 
 
     <!-- MODPACK -->
-    <div class="container section">
-        <h2 class="section-title">MODPACK NỔI TIẾNG</h2>
+    <div class="container section" id="modpack">
+    <h2 class="section-title">MODPACK NỔI TIẾNG</h2>
 
-        <div class="modpack-grid">
+    <div class="modpack-grid">
 
-            <!-- RLCraft -->
-            <div class="modpack-card rlcraft" onclick="toggleDetail(this)">
-                <img src="images/rlcraft.jpg" alt="RLCraft">
-                <h3>RLCraft</h3>
+        <!-- RLCraft -->
+        <a class="modpack-card rlcraft" href="rlcraft.html">
+            <img src="images/rlcraft.jpg" alt="RLCraft">
+            <h3>RLCraft</h3>
+            <p>Sinh tồn cực khó, RPG, khát nước, nhiệt độ.</p>
+            <span class="difficulty">Độ khó: ★★★★★</span>
+        </a>
 
-                <div class="modpack-detail">
-                    <p><b>Giới thiệu:</b> Modpack sinh tồn cực khó</p>
-                    <p><b>Mô tả:</b> RPG, khát nước, nhiệt độ</p>
-                    <p><b>Độ khó:</b> ★★★★★</p>
+        <!-- SkyFactory -->
+        <a class="modpack-card skyfactory" href="skyfactory.html">
+            <img src="images/skyfactory.gif" alt="SkyFactory">
+            <h3>SkyFactory</h3>
+            <p>Sinh tồn trên đảo bay, tạo tài nguyên từ số 0.</p>
+            <span class="difficulty">Độ khó: ★★★☆☆</span>
+        </a>
 
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/tbRAUWNf-2Y"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+        <!-- All The Mods -->
+        <a class="modpack-card atm" href="allthemod.html">
+            <img src="images/allthemod.jpg" alt="All The Mods">
+            <h3>All The Mods</h3>
+            <p>Modpack tổng hợp công nghệ + phép thuật.</p>
+            <span class="difficulty">Độ khó: ★★★★☆</span>
+        </a>
 
-            <!-- SkyFactory -->
-            <div class="modpack-card skyfactory" onclick="toggleDetail(this)">
-                <img src="images/skyfactory.jpg" alt="SkyFactory">
-                <h3>SkyFactory</h3>
+        <!-- DawnCraft -->
+        <a class="modpack-card dawncraft" href="dawncraft.html">
+            <img src="images/dawncraft.gif" alt="DawnCraft">
+            <h3>DawnCraft</h3>
+            <p>RPG thế giới mở, boss, nhiệm vụ, phong cách Souls-like.</p>
+            <span class="difficulty">Độ khó: ★★★★☆</span>
+        </a>
 
-                <div class="modpack-detail">
-                    <p><b>Giới thiệu:</b> Sinh tồn trên đảo bay</p>
-                    <p><b>Mô tả:</b> Tạo tài nguyên từ số 0</p>
-                    <p><b>Độ khó:</b> ★★★☆☆</p>
-
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/4mYI1bH5y6A"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SevTech -->
-            <div class="modpack-card sevtech" onclick="toggleDetail(this)">
-                <img src="images/sevtech.jpg" alt="SevTech Ages">
-                <h3>SevTech Ages</h3>
-
-                <div class="modpack-detail">
-                    <p><b>Giới thiệu:</b> Tiến hóa qua thời đại</p>
-                    <p><b>Mô tả:</b> Từ đồ đá đến công nghệ cao</p>
-                    <p><b>Độ khó:</b> ★★★★☆</p>
-
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/GxkqZ6Q9K1A"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Enigmatica -->
-            <div class="modpack-card enigmatica" onclick="toggleDetail(this)">
-                <img src="images/enigmatica.jpg" alt="Enigmatica 2">
-                <h3>Enigmatica 2</h3>
-
-                <div class="modpack-detail">
-                    <p><b>Giới thiệu:</b> Sinh tồn + công nghệ + phép thuật</p>
-                    <p><b>Mô tả:</b> Quest rõ ràng</p>
-                    <p><b>Độ khó:</b> ★★★★☆</p>
-
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/R2U9Z8Zs5mU"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-
+    </div>
+</div>
         </div>
-    </div>          
+         
 
     <!-- ===== FOOTER + MAP (GIỮ NGUYÊN) ===== -->
 <footer class="site-footer" id="sitemap">
