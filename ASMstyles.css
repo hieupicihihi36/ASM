@@ -1,0 +1,1371 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== BODY + BACKGROUND ===== */
+body {
+    padding-top: 80px; /* chừa header fixed */
+    color: #e8f5e9;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== BACKGROUND IMAGE (BLUR) ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(8px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+/* ===== DARK OVERLAY ===== */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    height: 80px;              /* chiều cao cố định */
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    overflow: hidden;          /* 🚫 không cho hitbox tràn xuống */
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(27, 94, 32, 0.95);
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -30px; /* 👈 xích về trái */
+}
+
+.nav a {
+    color: #c8e6c9;
+    margin-left: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #ffeb3b;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section {
+    margin: 40px 0;
+}
+
+h2 {
+    color: #a5d6a7;
+    margin-bottom: 16px;
+}
+
+/* ===== TABLE ===== */
+.modpack-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(232, 245, 233, 0.95);
+    color: #1b5e20;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modpack-table th,
+.modpack-table td {
+    border: 2px solid #1b5e20;
+    padding: 12px;
+    vertical-align: top;
+}
+
+.modpack-table th {
+    background: #2e7d32;
+    color: #ffffff;
+    text-align: left;
+}
+
+.modpack-table tr:hover {
+    background: #c8e6c9;
+}
+
+.modpack-table img {
+    width: 180px;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    border: 2px solid #2e7d32;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: rgba(0, 0, 0, 0.95);
+    color: #c8e6c9;
+    padding: 24px 0;          
+    margin-top: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.footer-text {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.modpack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.modpack-card {
+    text-decoration: none;   /* BỎ GẠCH */
+    color: inherit;          /* Giữ màu chữ */
+    display: block;          /* Để <a> hoạt động như div */
+}
+
+.modpack-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.modpack-card img {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 12px;   /* căn giữa ảnh */
+    display: block;
+}
+.modpack-card h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ===== DETAIL (ẨN / HIỆN) ===== */
+.modpack-detail {
+    display: none;
+    margin-top: 10px;
+}
+
+.modpack-detail a {
+    display: inline-block;
+    margin-top: 6px;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.modpack-card.active .modpack-detail {
+    display: block;
+}
+
+/* ===== CARD CHUNG ===== */
+.modpack-card {
+    background: rgba(232, 245, 233, 0.95);
+    color: #1b5e20;
+    border: 3px solid #2e7d32;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.25s,
+        background-color 0.25s,
+        border-color 0.25s;
+}
+
+.modpack-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== RLCraft – ĐỎ (NGUY HIỂM) ===== */
+.modpack-card.rlcraft:hover {
+    background: #ffebee;
+    border-color: #d32f2f;
+    box-shadow: 0 0 18px rgba(211, 47, 47, 0.7);
+}
+
+.modpack-card.rlcraft:hover h3 {
+    color: #b71c1c;
+}
+
+/* ===== SkyFactory – XANH TRỜI ===== */
+.modpack-card.skyfactory:hover {
+    background: #e3f2fd;
+    border-color: #1976d2;
+    box-shadow: 0 0 18px rgba(25, 118, 210, 0.7);
+}
+
+.modpack-card.skyfactory:hover h3 {
+    color: #0d47a1;
+}
+
+/* ===== SevTech – TÍM CÔNG NGHỆ ===== */
+.modpack-card.dawncraft:hover {
+    background: #f3e5f5;
+    border-color: #7b1fa2;
+    box-shadow: 0 0 18px rgba(123, 31, 162, 0.7);
+}
+
+.modpack-card.dawncraft:hover h3 {
+    color: #4a148c;
+}
+
+/* ===== Enigmatica – XANH LÁ PHÉP THUẬT (FIX) ===== */
+.modpack-card.atm:hover {
+    background: #e7ebcb;            /* xanh đậm hơn */
+    border-color: #fbff25;          /* xanh đậm rõ */
+    box-shadow: 0 0 20px rgba(242, 255, 243, 0.8);
+}
+
+.modpack-card.atm:hover h3 {
+    color: #88941c;
+}
+
+/* ===== MAP DƯỚI FOOTER ===== */
+.map-footer {
+    width: 70vw;                         /* 👈 tràn màn hình */
+    margin-left: calc(50% - 50vw);        /* 👈 phá container */
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0;
+}
+
+.map-footer iframe {
+    width: 100%;
+    height: 250px;                        /* 👈 to rõ */
+    border: 0;
+    border-radius: 0;                     /* 👈 tràn viền thật */
+    box-shadow: none;
+    display: block;
+}
+
+
+/* ===== VIDEO MODAL ===== */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.video-content {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.video-content iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ===== VIDEO EMBED TRONG CARD ===== */
+.video-embed {
+    margin-top: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    color: #ffeb3b; /* vàng Minecraft */
+    margin-bottom: 24px;
+    padding-left: 14px;
+}
+
+/* Thanh xanh bên trái */
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 6px;
+    height: 70%;
+    background: linear-gradient(to bottom, #00e676, #1b5e20);
+    border-radius: 4px;
+}
+
+/* Gạch chân phát sáng */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #ffeb3b, transparent);
+    border-radius: 4px;
+}
+
+/* Hiệu ứng hover */
+.section-title:hover {
+    text-shadow: 0 0 12px rgba(255, 235, 59, 0.9);
+}
+
+/* ===== VANILLA GRID ===== */
+.vanilla-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+/* ===== VANILLA CARD – NÂNG CẤP HIỆU ỨNG ===== */
+.vanilla-card {
+    background: rgba(232, 245, 233, 0.95);
+    color: #1b5e20;
+    border: 3px solid #2e7d32;
+    border-radius: 14px;
+    padding: 18px;
+
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+/* ===== HOVER: GIỐNG MODPACK + NEON XANH ===== */
+.vanilla-card:hover {
+    transform: translateY(-6px) scale(1.01);
+
+    background: #c8e6c9;
+    border-color: #00e676;
+
+    box-shadow:
+        0 0 12px rgba(0, 230, 118, 0.9),
+        0 0 28px rgba(0, 230, 118, 0.6),
+        0 12px 24px rgba(0,0,0,0.5);
+}
+
+/* Title nổi hơn khi hover */
+.vanilla-card:hover h3 {
+    color: #0d3b26;
+    text-shadow: 0 0 6px rgba(0, 230, 118, 0.8);
+}
+
+.vanilla-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.vanilla-card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+.vanilla-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+}
+
+.vanilla-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .vanilla-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .vanilla-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== ARMOR TABLE ===== */
+.armor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    background: rgba(232, 245, 233, 0.95);
+    color: #1b5e20;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.armor-table th,
+.armor-table td {
+    border: 2px solid #1b5e20;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.armor-table th {
+    background: #e0e0e0;
+    color: #263238;
+    font-weight: 700;
+    text-align: center;
+}
+
+.armor-table td:first-child {
+    width: 120px;
+    text-align: center;
+}
+
+.armor-table td:nth-child(2) {
+    width: 300px;
+}
+
+.armor-table img {
+    width: 140px;
+    image-rendering: pixelated; /* 👈 đúng chất Minecraft */
+}
+
+.armor-table tr:hover {
+    background: #c8e6c9;
+}
+
+/* Subtitle */
+.vanilla-subtitle {
+    margin-top: 24px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffeb3b;
+}
+
+/* ===== ARMOR CARD ===== */
+.armor-card {
+    background: rgba(232, 245, 233, 0.95);
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+
+    padding: 12px 14px;      /* 👈 nhỏ hơn */
+    max-width: 720px;        /* 👈 gọn card */
+    margin: 8 auto 20px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.armor-card:hover {
+    box-shadow: 0 0 18px rgba(0, 230, 118, 0.8);
+    border-color: #00e676;
+}
+
+/* ===== ARMOR HEADER ===== */
+.armor-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 800;
+    font-size: 20px;
+    color: #1b5e20;
+}
+
+.armor-header img {
+    width: 48px;
+    image-rendering: pixelated;
+}
+
+/* ===== ARMOR DETAIL (GRID RECIPE) ===== */
+.armor-detail {
+    display: none;
+    margin-top: 12px;
+
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;               /* 👈 giảm khoảng cách */
+    justify-content: center;
+}
+
+
+.armor-card.active .armor-detail {
+    display: grid;
+}
+
+/* ===== ARMOR ITEM ===== */
+.armor-item {
+    text-align: center;
+}
+
+.armor-item h4 {
+    margin-bottom: 6px;
+    font-size: 15px;          /* 👈 nhỏ hơn */
+    font-weight: 700;
+    color: #1b5e20;
+}
+
+.armor-item img {
+    width: 200px;            /* 👈 nhỏ hơn chút */
+    image-rendering: pixelated;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .armor-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .armor-item img {
+        width: 120px;
+    }
+}
+
+/* ===== ARMOR TITLE COLORS ===== */
+
+
+.leather-title {
+    color: #d28b5c;
+    border-left: 6px solid #8b5a2b;
+}
+
+.iron-title {
+    color: #e0e0e0;
+    border-left: 6px solid #b0b0b0;
+}
+
+.gold-title {
+    color: #ffd54f;
+    border-left: 6px solid #f2b705;
+}
+
+.diamond-title {
+    color: #4dd0e1;
+    border-left: 6px solid #26c6da;
+}
+
+.netherite-title {
+    color: #cfcfcf;
+    border-left: 6px solid #5b5b5b;
+}
+
+
+
+/* ===== ARMOR CATEGORY TITLE ===== */
+.vanilla-subtitle {
+    display: inline-block;
+    margin: 28px 0 10px;
+
+    padding: 8px 16px;
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.55);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.armor-card.active .armor-detail.slide-mode {
+    display: grid;
+}
+
+.armor-detail.slide-mode .armor-item {
+    display: none;
+}
+
+.armor-detail.slide-mode .armor-item.active {
+    display: block;
+}
+.weapon-title,
+.tool-title {
+    display: block;              /* 👈 QUAN TRỌNG */
+    width: fit-content;
+
+    padding: 8px 14px;
+    margin: 24px 0 14px 0;       /* 👈 ổn định */
+
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+
+    font-weight: 700;
+    font-size: 16px;
+
+    border-radius: 8px;
+    text-align: left;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    backdrop-filter: blur(4px);
+
+    clear: both;                 /* 👈 chặn mọi đè layout */
+}
+
+.armor-item {
+    position: relative;
+    text-align: center;
+}
+
+/* TÊN ITEM */
+.item-name {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    color: #faffd6; /* vàng nhạt – rất nổi */
+    background: rgba(0, 0, 0, 0.65);
+
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.6),
+        inset 0 0 6px rgba(255, 255, 255, 0.1);
+
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: 0.35s ease;
+}
+
+/* CHỈ HIỆN KHI ACTIVE */
+.armor-item.active .item-name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-group {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.slide-group .armor-item {
+    display: none;
+    text-align: center;
+}
+
+.slide-group .armor-item.active {
+    display: block;
+}
+
+.item-name {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 10px;
+
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+.dimension-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.dimension-tabs .tab {
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background: #2e2e2e;
+    color: #ccc;
+}
+
+.dimension-tabs .tab.active {
+    background: #2e7d32;
+    color: #fff;
+}
+
+.ore-grid {
+    max-width: 900px;       
+    margin: 30px 0;         
+    padding-left: 0;         
+    display: none;
+}
+
+
+
+.ore-grid.active {
+    display: grid;
+}
+
+.ore-card {
+    background: #e7f3e7;
+    border: 3px solid #2e7d32;
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.ore-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.ore-info {
+    display: none;
+    margin-top: 8px;
+}
+
+.ore-card.open .ore-info {
+    display: block;
+}
+
+/* ===== OzRE GRID LAYOUT ===== */
+
+/* OVERWORLD: 2 cột */
+.overworld-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* ===== FIX: NETHER GRID GỌN NHƯ OVERWORLD ===== */
+.nether-grid {
+    grid-template-columns: 1fr;    
+    max-width: 530px;               
+    margin: 30px 0;              
+}
+
+
+/* ===== ORE CARD ===== */
+.ore-card {
+    background: rgba(232, 245, 233, 0.95);
+    border: 3px solid #2e7d32;
+    border-radius: 14px;
+    padding: 16px 18px;
+    cursor: default;
+}
+
+/* ===== ORE TITLE ===== */
+.ore-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+}
+
+/* ===== ORE INFO: LUÔN HIỆN ===== */
+.ore-info {
+    display: block !important;
+    margin-top: 6px;
+    color: #1b5e20;
+}
+
+.ore-info p {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #2e7d32;
+}
+
+.ore-info b {
+    color: #0d4d1f;
+    font-weight: 800;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    .overworld-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ore-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.ore-img {
+    width: 70px;
+    height: 70px;
+    image-rendering: pixelated;
+}
+
+
+.ore-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ore-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ===== ORE DROP HUB (BIG - TOP RIGHT) ===== */
+.ore-hub {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    min-width: 180px;
+    padding: 14px 16px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.92),
+        rgba(0, 0, 0, 0.82)
+    );
+
+    border: 3px solid #00e676;
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 14px rgba(0, 230, 118, 0.9),
+        0 0 30px rgba(0, 230, 118, 0.5);
+
+    opacity: 0;
+    transform: scale(0.85);
+    pointer-events: none;
+
+    transition: 0.25s ease;
+    z-index: 50;
+}
+
+/* Hover mới hiện */
+.ore-card:hover .ore-hub {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===== HUB TITLE ===== */
+.hub-title {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #00e676;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ===== HUB ITEMS ===== */
+.hub-items {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.hub-items img {
+    width: 48px;          /* 👈 RẤT TO */
+    height: 48px;
+    image-rendering: pixelated;
+
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 6px;
+
+    box-shadow:
+        inset 0 0 6px rgba(255,255,255,0.2),
+        0 4px 10px rgba(0,0,0,0.6);
+}
+
+.mob-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 140px); /* 👈 5 con / hàng */
+    justify-content: center;                /* 👈 canh giữa toàn grid */
+    gap: 26px;
+
+    padding: 30px 20px;
+    margin: 0 auto;
+
+    display: none;
+}
+
+.mob-grid.active {
+    display: grid;
+}
+
+.mob-card {
+    position: relative;
+    text-align: center;
+}
+
+.mob-img {
+    width: 80px;
+    transition: .15s ease;
+}
+
+.mob-card:hover .mob-img {
+    transform: scale(1.2);
+}
+
+.mob-card.show-hub .mob-hub {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.mob-hub {
+    position: absolute;
+    top: -20px;
+    right: -220px;
+
+    width: 320px;
+    padding: 16px 18px;
+
+ 
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.43),
+            rgba(0, 0, 0, 0.43)
+        ),
+        var(--mob-bg);
+
+    background-size: contain;  
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 3px solid #2aff7a;
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 14px rgba(42,255,122,.9),
+        0 0 30px rgba(42,255,122,.4);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 14px;
+
+    opacity: 0;
+    transform: scale(.85);
+    pointer-events: none;
+    transition: .12s ease-out;   /* 👈 nhanh hơn */
+    z-index: 50;
+}
+
+.mob-hub h4 {
+    grid-column: 1 / -1;   /* 👈 chiếm full hàng */
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    color: #2aff7a;
+    margin-bottom: 6px;
+    border-bottom: 2px solid rgba(42,255,122,0.4);
+    padding-bottom: 6px;
+}
+.mob-hub p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+
+    background: rgba(255,255,255,0.06);
+    padding: 6px 8px;
+    border-radius: 8px;
+
+    box-shadow: inset 0 0 4px rgba(255,255,255,0.08);
+}
+
+.mob-hub b {
+    color: #aaffcc;
+}
+.mob-desc {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+
+    font-size: 13px;
+    color: #d9ffe8;
+
+    background: rgba(0,0,0,0.35);
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+.mob-card.show-hub .mob-hub {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.mob-name {
+    margin-top: 6px;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+
+    line-height: 1.2;
+    width: 100%;
+}
+
+.mob-card:not(.show-hub) .mob-hub {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.43), rgba(0,0,0,0.43));
+}
+
+html, body {
+    height: 100%;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* ===== BIG CENTER TIMELINE ===== */
+.timeline-big {
+    position: relative;
+}
+
+/* Trục giữa */
+.timeline-big::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #00ff88;
+    transform: translateX(-50%);
+    z-index: 0;          /* 👈 THÊM */
+}
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 30px 0;
+    z-index: 2;          /* 👈 THÊM */
+}
+
+/* Card */
+.timeline-card {
+    max-width: 520px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 18px;
+    padding: 24px;
+}
+
+/* Ảnh */
+.timeline-card img {
+    width: 140px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* Text */
+.timeline-text h3 {
+    font-size: 34px;
+    color: #00e676;
+    margin-bottom: 10px;
+}
+
+.timeline-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e8f5e9;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+    .timeline-big::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+        text-align: left;
+    }
+}
+
+.timeline-item.right {
+    left: 50%;
+    padding-left: 90px;    /* 👈 đẩy card ra khỏi trục */
+}
+
+.timeline-item.left {
+    left: 0;
+    padding-right: 90px;   /* 👈 đẩy card ra khỏi trục */
+    text-align: right;
+}
+
+.timeline-item.right .timeline-card {
+    margin-left: 10px;
+}
+
+/* ===== BOSS GRID ===== */
+.boss-grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.boss-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 30px;
+    align-items: center;
+}
+
+.boss-info h3 {
+    font-size: 32px;
+    color: #ffeb3b;
+    margin-bottom: 12px;
+}
+
+.boss-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e8f5e9;
+}
+
+.boss-image img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.boss-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .boss-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.intro-clean {
+    max-width: 900px;
+}
+
+.intro-clean p {
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.intro-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.intro-list li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.intro-note {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+
+.video-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.video-card h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #9cff57;
+}
+
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    border: none;
+}
+
+/* ===== TIMELINE TOGGLE ===== */
+.timeline-more.hidden {
+    display: none;
+}
+
+.timeline-more {
+    animation: fadeSlide 0.4s ease;
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-toggle {
+    margin: 30px auto 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 22px;
+    color: #9cff57;
+    user-select: none;
+    position: relative;
+    z-index: 5; 
+}
+
+.timeline-toggle:hover {
+    opacity: 0.8;
+}
+
+.timeline-big * {
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-big::before {
+    z-index: 0;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+.social-icons .fb { background: #1877f2; }
+.social-icons .dc { background: #5865f2; }
+.social-icons .zalo { background: #008fe5; }
+
+.social-icons a:hover {
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.65);
+}

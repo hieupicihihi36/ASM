@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Vanilla Tools & Weapons | Minecraft</title>
+
+    <link rel="icon" type="image/png" href="images/logomc.png">
+    <link rel="stylesheet" href="ASMstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <a href="ASM.html">
+                <img src="images/logomc.png">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="#sitemap">Sitemap</a>
+            <a href="lienhe.html">Liên hệ</a>
+        </nav>
+    </div>
+</header>
+
+<h2 class="section-title">VANILLA ORES</h2>
+
+<!-- ===== DIMENSION TABS ===== -->
+<div class="dimension-tabs">
+    <button class="tab active" data-dim="overworld">🌍 OVERWORLD</button>
+    <button class="tab" data-dim="nether">🔥 NETHER</button>
+</div>
+
+<!-- ===== OVERWORLD ORES ===== -->
+<div class="ore-grid overworld-grid active" id="overworld">
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/coal_ore.png"
+                 data-normal="images/ore/coal_ore.png"
+                 data-deep="images/ore/deep_coal_ore.png">
+            <div class="ore-title">Coal Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Common</p>
+            <p><b>Pickaxe:</b> Wooden+</p>
+            <p><b>Spawn height:</b> Y 0 → 320</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP</div>
+    <div class="hub-items">
+        <img src="images/ingr/coal.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/copper_ore.png"
+                 data-normal="images/ore/copper_ore.png"
+                 data-deep="images/ore/deep_copper_ore.png">
+            <div class="ore-title">Copper Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Common</p>
+            <p><b>Pickaxe:</b> Stone+</p>
+            <p><b>Spawn height:</b> Y -16 → 112</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP | SMELT</div>
+    <div class="hub-items">
+        <img src="images/ingr/raw_copper.png">
+        <img src="images/ingr/copper.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/iron_ore.png"
+                 data-normal="images/ore/iron_ore.png"
+                 data-deep="images/ore/deep_iron_ore.png">
+            <div class="ore-title">Iron Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Uncommon</p>
+            <p><b>Pickaxe:</b> Stone+</p>
+            <p><b>Spawn height:</b> Y -64 → 72</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP | SMELT</div>
+    <div class="hub-items">
+        <img src="images/ingr/raw_iron.png">
+        <img src="images/ingr/iron.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/gold_ore.png"
+                 data-normal="images/ore/gold_ore.png"
+                 data-deep="images/ore/deep_gold_ore.png">
+            <div class="ore-title">Gold Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Rare</p>
+            <p><b>Pickaxe:</b> Iron+</p>
+            <p><b>Spawn height:</b> Y -64 → 32</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP | SMELT</div>
+    <div class="hub-items">
+        <img src="images/ingr/raw_gold.png">
+        <img src="images/ingr/gold.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/redstone_ore.png"
+                 data-normal="images/ore/redstone_ore.png"
+                 data-deep="images/ore/deep_redstone_ore.png">
+            <div class="ore-title">Redstone Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Rare</p>
+            <p><b>Pickaxe:</b> Iron+</p>
+            <p><b>Spawn height:</b> Y -64 → -32</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP</div>
+    <div class="hub-items">
+        <img src="images/ingr/redstone.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/lapis_ore.png"
+                 data-normal="images/ore/lapis_ore.png"
+                 data-deep="images/ore/deep_lapis_ore.png">
+            <div class="ore-title">Lapis Lazuli</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Rare</p>
+            <p><b>Pickaxe:</b> Stone+</p>
+            <p><b>Spawn height:</b> Y -64 → 64</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP</div>
+    <div class="hub-items">
+        <img src="images/ingr/lapis.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/diamond_ore.png"
+                 data-normal="images/ore/diamond_ore.png"
+                 data-deep="images/ore/deep_diamond_ore.png">
+            <div class="ore-title">Diamond Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Epic</p>
+            <p><b>Pickaxe:</b> Iron+</p>
+            <p><b>Spawn height:</b> Y -64 → 16</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP</div>
+    <div class="hub-items">
+        <img src="images/ingr/diamond.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img"
+                 src="images/ore/emerald_ore.png"
+                 data-normal="images/ore/emerald_ore.png"
+                 data-deep="images/ore/deep_emerald_ore.png">
+            <div class="ore-title">Emerald Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Legendary</p>
+            <p><b>Pickaxe:</b> Iron+</p>
+            <p><b>Spawn height:</b> Y -16 → 320 (Mountains)</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP</div>
+    <div class="hub-items">
+        <img src="images/ingr/emerald.png">
+    </div>
+</div>
+    </div>
+
+</div>
+
+<!-- ===== NETHER ORES ===== -->
+<div class="ore-grid nether-grid" id="nether">
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img" src="images/ore/nether_gold_ore.png">
+            <div class="ore-title">Nether Gold Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Uncommon</p>
+            <p><b>Pickaxe:</b> Wooden+</p>
+            <p><b>Spawn height:</b> Y 10 → 117</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP</div>
+    <div class="hub-items">
+        <img src="images/ingr/gold_nugget.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img" src="images/ore/nether_quartz_ore.png">
+            <div class="ore-title">Nether Quartz Ore</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Common</p>
+            <p><b>Pickaxe:</b> Wooden+</p>
+            <p><b>Spawn height:</b> Y 10 → 117</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">DROP</div>
+    <div class="hub-items">
+        <img src="images/ingr/quartz.png">
+    </div>
+</div>
+    </div>
+
+    <div class="ore-card">
+        <div class="ore-head">
+            <img class="ore-img" src="images/ore/ancient_debris.png">
+            <div class="ore-title">Ancient Debris</div>
+        </div>
+        <div class="ore-info">
+            <p><b>Rarity:</b> Legendary</p>
+            <p><b>Pickaxe:</b> Diamond+</p>
+            <p><b>Spawn height:</b> Y 8 → 22</p>
+        </div>
+        <div class="ore-hub">
+    <div class="hub-title">SMELTING</div>
+    <div class="hub-items">
+        <img src="images/ingr/ancient.png">
+    </div>
+</div>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="sitemap">
+    <div class="footer-text">
+        © 2026 - Web giới thiệu Modpack Minecraft
+    </div>
+
+    <div class="map-footer">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.966127888972!2d106.6032147737362!3d10.813904058503981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1sen!2s!4v1769586740682!5m2!1sen!2s"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</footer>
+
+<!-- ===== SLIDE SCRIPT (2s) ===== -->
+<script>
+let timers = new WeakMap();
+
+document.querySelectorAll(".armor-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const detail = card.querySelector(".slide-mode");
+        if (!detail) return;
+
+        const items = detail.querySelectorAll(".armor-item");
+
+        if (card.classList.contains("active")) {
+            card.classList.remove("active");
+            items.forEach(i => i.classList.remove("active"));
+            clearInterval(timers.get(card));
+            return;
+        }
+
+        card.classList.add("active");
+
+        let index = 0;
+        items[index].classList.add("active");
+
+        const timer = setInterval(() => {
+            items[index].classList.remove("active");
+            index = (index + 1) % items.length;
+            items[index].classList.add("active");
+        }, 2000);
+
+        timers.set(card, timer);
+    });
+});
+</script>
+
+<script>
+document.querySelectorAll(".slide-group").forEach(group => {
+    const items = group.querySelectorAll(".armor-item");
+    let index = 0;
+    const delay = Number(group.dataset.delay) || 2000;
+
+    setInterval(() => {
+        items[index].classList.remove("active");
+        index = (index + 1) % items.length;
+        items[index].classList.add("active");
+    }, delay);
+});
+</script>
+
+<script>
+/* ===== TAB SWITCH ===== */
+document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+        document.querySelectorAll(".ore-grid").forEach(g => g.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.dim).classList.add("active");
+    });
+});
+
+/* ===== ORE TOGGLE ===== */
+document.querySelectorAll(".ore-card").forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("open");
+    });
+});
+</script>
+
+<script>
+document.querySelectorAll(".ore-card").forEach(card => {
+    const img = card.querySelector(".ore-img");
+    if (!img) return;
+
+    const normal = img.dataset.normal;
+    const deep = img.dataset.deep;
+
+    card.addEventListener("mouseenter", () => {
+        if (deep) img.src = deep;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        if (normal) img.src = normal;
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Vanilla Tools & Weapons | Minecraft</title>
+
+    <link rel="icon" type="image/png" href="images/logomc.png">
+    <link rel="stylesheet" href="ASMstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+    <div class="container header-flex">
+        <div class="logo">
+            <a href="ASM.html">
+                <img src="images/logomc.png">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="#sitemap">Sitemap</a>
+            <a href="lienhe.html">Liên hệ</a>
+        </nav>
+    </div>
+</header>
+
+<body>
+     <div class="page-wrapper">
+    <main class="main-content">
+<h2 class="section-title">VANILLA MOBS</h2>
+
+<!-- ===== DIMENSION TABS ===== -->
+<!-- ===== MOB TYPE TABS ===== -->
+<div class="dimension-tabs">
+    <button class="tab active" data-type="passive">🟢 PASSIVE</button>
+    <button class="tab" data-type="neutral">🟡 NEUTRAL</button>
+    <button class="tab" data-type="hostile">🔴 HOSTILE</button>
+    <button class="tab" data-type="boss">🔴 BOSS</button>
+</div>
+
+<div class="mob-grid active" id="passive">
+
+    <!-- ===== ALLAY ===== -->
+<div class="mob-card" data-bg="images/mob/allay.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/allay_egg.png" data-hover="images/mob/allay.png">
+    </div>
+    <div class="mob-name">Allay</div>
+    <div class="mob-hub">
+        <h4>ALLAY</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Woodland / Outpost</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">Thu thập vật phẩm tương tự người chơi đưa cho nó.</p>
+    </div>
+</div>
+
+<!-- ===== ARMADILLO ===== -->
+<div class="mob-card" data-bg="images/mob/armadillo.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/armadillo_egg.png" data-hover="images/mob/armadillo.png">
+    </div>
+    <div class="mob-name">Armadillo</div>
+    <div class="mob-hub">
+        <h4>ARMADILLO</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Savanna</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Cuộn tròn khi gặp nguy hiểm, cho scute để craft giáp chó.</p>
+    </div>
+</div>
+
+<!-- ===== BAT ===== -->
+<div class="mob-card" data-bg="images/mob/bat.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/bat_egg.png" data-hover="images/mob/bat.png">
+    </div>
+    <div class="mob-name">Bat</div>
+    <div class="mob-hub">
+        <h4>BAT</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Caves</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Sinh vật bay trang trí, không tấn công người chơi.</p>
+    </div>
+</div>
+
+<!-- ===== CAMEL ===== -->
+<div class="mob-card" data-bg="images/mob/camel.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/camel_egg.png" data-hover="images/mob/camel.png">
+    </div>
+    <div class="mob-name">Camel</div>
+    <div class="mob-hub">
+        <h4>CAMEL</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Desert</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">Có thể cưỡi, phù hợp di chuyển trong sa mạc.</p>
+    </div>
+</div>
+
+<!-- ===== CAT ===== -->
+<div class="mob-card" data-bg="images/mob/cat.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/cat_egg.png" data-hover="images/mob/cat.png">
+    </div>
+    <div class="mob-name">Cat</div>
+    <div class="mob-hub">
+        <h4>CAT</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Village</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">Đuổi creeper và mang quà khi ngủ.</p>
+    </div>
+</div>
+
+<!-- ===== CHICKEN ===== -->
+<div class="mob-card" data-bg="images/mob/chicken.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/chicken_egg.png" data-hover="images/mob/chicken.png">
+    </div>
+    <div class="mob-name">Chicken</div>
+    <div class="mob-hub">
+        <h4>CHICKEN</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Plains / Forest</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Đẻ trứng định kỳ, dùng nhiều trong farm.</p>
+    </div>
+</div>
+
+<!-- ===== PIG ===== -->
+<div class="mob-card" data-bg="images/mob/pig.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/pig_egg.png" data-hover="images/mob/pig.png">
+    </div>
+    <div class="mob-name">Pig</div>
+    <div class="mob-hub">
+        <h4>PIG</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Plains</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Mob nông trại cơ bản, dễ nuôi.</p>
+    </div>
+</div>
+
+<!-- ===== COW ===== -->
+<div class="mob-card" data-bg="images/mob/cow.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/cow_egg.png" data-hover="images/mob/cow.png">
+    </div>
+    <div class="mob-name">Cow</div>
+    <div class="mob-hub">
+        <h4>COW</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Plains</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Nguồn thịt, da và sữa quan trọng.</p>
+    </div>
+</div>
+
+<!-- ===== SHEEP ===== -->
+<div class="mob-card" data-bg="images/mob/sheep.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/sheep_egg.png" data-hover="images/mob/sheep.png">
+    </div>
+    <div class="mob-name">Sheep</div>
+    <div class="mob-hub">
+        <h4>SHEEP</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Plains</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Nguồn len chính cho xây dựng và trang trí.</p>
+    </div>
+</div>
+
+<!-- ===== PARROT ===== -->
+<div class="mob-card" data-bg="images/mob/parrot.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/parrot_egg.png" data-hover="images/mob/parrot.png">
+    </div>
+    <div class="mob-name">Parrot</div>
+    <div class="mob-hub">
+        <h4>PARROT</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Jungle</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">Vẹt có thể bắt chước âm thanh mob và ngồi trên vai người chơi.</p>
+    </div>
+</div>
+
+<!-- ===== GLOW SQUID ===== -->
+<div class="mob-card" data-bg="images/mob/glow_squid.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/glow_squid_egg.png" data-hover="images/mob/glow_squid.png">
+    </div>
+    <div class="mob-name">Glow Squid</div>
+    <div class="mob-hub">
+        <h4>GLOW SQUID</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Deep Ocean / Caves</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Phát sáng nhẹ, rơi Glow Ink Sac dùng cho bảng hiệu.</p>
+    </div>
+</div>
+
+<!-- ===== HAPPY GHAST ===== -->
+<div class="mob-card" data-bg="images/mob/happy_ghast.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/ghast_egg.png" data-hover="images/mob/happy_ghast.png">
+    </div>
+    <div class="mob-name">Happy Ghast</div>
+    <div class="mob-hub">
+        <h4>HAPPY GHAST</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Nether</p>
+        <p><b>Biome:</b> Soul Sand Valley</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">Phiên bản ghast hiền lành, không tấn công người chơi.</p>
+    </div>
+</div>
+
+<!-- ===== SNIFFER ===== -->
+<div class="mob-card" data-bg="images/mob/sniffer.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/sniffer_egg.png" data-hover="images/mob/sniffer.png">
+    </div>
+    <div class="mob-name">Sniffer</div>
+    <div class="mob-hub">
+        <h4>SNIFFER</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Ancient Ruins</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">Đào bới hạt giống cổ đại để trồng cây hiếm.</p>
+    </div>
+</div>
+
+<!-- ===== COPPER GOLEM ===== -->
+<div class="mob-card" data-bg="images/mob/copper_golem.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/copper_golem_egg.png" data-hover="images/mob/copper_golem.png">
+    </div>
+    <div class="mob-name">Copper Golem</div>
+    <div class="mob-hub">
+        <h4>COPPER GOLEM</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Player-built</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">Golem đồng rất hữu dụng trong sắp xếp lại rương đồ</p>
+    </div>
+</div>
+
+<!-- ===== RABBIT ===== -->
+<div class="mob-card" data-bg="images/mob/rabbit.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/rabbit_egg.png" data-hover="images/mob/rabbit.png">
+    </div>
+    <div class="mob-name">Rabbit</div>
+    <div class="mob-hub">
+        <h4>RABBIT</h4>
+        <p><b>Type:</b> Passive</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Plains / Desert</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Thỏ nhỏ nhanh nhẹn, rơi chân thỏ và thịt khi bị tiêu diệt.</p>
+    </div>
+</div>
+</div>
+<!-- ===== NATURAL MOBS ===== -->
+<div class="mob-grid" id="neutral">
+
+<!-- Bee -->
+<div class="mob-card" data-bg="images/mob/bee.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/bee_egg.png" data-hover="images/mob/bee.png">
+    </div>
+    <div class="mob-name">Bee</div>
+    <div class="mob-hub">
+        <h4>BEE</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Plains / Flower Forest</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+            Ong hiền lành, chỉ tấn công khi bị khiêu khích và có vai trò thụ phấn.
+        </p>
+    </div>
+    
+</div>
+
+<!-- Cave Spider -->
+<div class="mob-card" data-bg="images/mob/back_cave_spider.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/cave_spider_egg.png" data-hover="images/mob/cave_spider.png">
+    </div>
+    <div class="mob-name">Cave Spider</div>
+    <div class="mob-hub">
+        <h4>CAVE SPIDER</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Mineshaft</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+            Nhện hang nhỏ nhưng nguy hiểm, có khả năng gây độc khi tấn công.
+        </p>
+    </div>
+</div>
+
+<!-- Dolphin -->
+<div class="mob-card" data-bg="images/mob/dolphin.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/dolphin_egg.png" data-hover="images/mob/dolphin.png">
+    </div>
+    <div class="mob-name">Dolphin</div>
+    <div class="mob-hub">
+        <h4>DOLPHIN</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Ocean</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">
+            Cá heo thân thiện, giúp người chơi bơi nhanh hơn khi ở gần.
+        </p>
+    </div>
+</div>
+
+<!-- Drowned -->
+<div class="mob-card" data-bg="images/mob/back_drowned.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/drowned_egg.png" data-hover="images/mob/drowned.png">
+    </div>
+    <div class="mob-name">Drowned</div>
+    <div class="mob-hub">
+        <h4>DROWNED</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Ocean / River</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+            Zombie dưới nước, thường xuất hiện ở sông và đại dương, đôi khi cầm đinh ba rất nguy hiểm.
+        </p>
+    </div>
+</div>
+
+<!-- Enderman -->
+<div class="mob-card" data-bg="images/mob/enderman.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/enderman_egg.png" data-hover="images/mob/enderman.png">
+    </div>
+    <div class="mob-name">Enderman</div>
+    <div class="mob-hub">
+        <h4>ENDERMAN</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld / The End</p>
+        <p><b>Biome:</b> Any</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+            Sinh vật bí ẩn có thể dịch chuyển tức thời, chỉ trở nên thù địch khi người chơi nhìn vào mắt nó.
+        </p>
+    </div>
+</div>
+
+<!-- Fox -->
+<div class="mob-card" data-bg="images/mob/fox.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/fox_egg.png" data-hover="images/mob/fox.png">
+    </div>
+    <div class="mob-name">Fox</div>
+    <div class="mob-hub">
+        <h4>FOX</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Taiga</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">
+            Cáo nhanh nhẹn và ranh mãnh, có thể nhặt và giữ vật phẩm trong miệng.
+        </p>
+    </div>
+</div>
+
+<!-- Goat -->
+<div class="mob-card" data-bg="images/mob/back_goat.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/goat_egg.png" data-hover="images/mob/goat.png">
+    </div>
+    <div class="mob-name">Goat</div>
+    <div class="mob-hub">
+        <h4>GOAT</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Mountains</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+            Dê núi hiếu động, thường bất ngờ húc người chơi khỏi vách núi.
+        </p>
+    </div>
+</div>
+
+<!-- Iron Golem -->
+<div class="mob-card" data-bg="images/mob/back_iron_golem.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/iron_golem_egg.png" data-hover="images/mob/iron_golem.png">
+    </div>
+    <div class="mob-name">Iron Golem</div>
+    <div class="mob-hub">
+        <h4>IRON GOLEM</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Village</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+           Người bảo vệ làng, cực kỳ mạnh mẽ và chỉ tấn công khi dân làng bị đe dọa.
+        </p>
+    </div>
+</div>
+
+<!-- Llama -->
+<div class="mob-card" data-bg="images/mob/back_llama.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/llama_egg.png" data-hover="images/mob/llama.png">
+    </div>
+    <div class="mob-name">Llama</div>
+    <div class="mob-hub">
+        <h4>LLAMA</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Mountains</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+           Động vật có thể chở đồ, sẽ nhổ nước bọt để tự vệ khi bị tấn công.
+        </p>
+    </div>
+</div>
+
+<!-- Panda -->
+<div class="mob-card" data-bg="images/mob/panda.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/panda_egg.png" data-hover="images/mob/panda.png">
+    </div>
+    <div class="mob-name">Panda</div>
+    <div class="mob-hub">
+        <h4>PANDA</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Jungle</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">
+           Gấu trúc hiền lành với nhiều tính cách khác nhau, đặc biệt yêu thích tre.
+        </p>
+    </div>
+</div>
+
+<!-- Piglin -->
+<div class="mob-card" data-bg="images/mob/piglin.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/piglin_egg.png" data-hover="images/mob/piglin.png">
+    </div>
+    <div class="mob-name">Piglin</div>
+    <div class="mob-hub">
+        <h4>PIGLIN</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Nether</p>
+        <p><b>Biome:</b> Nether Wastes</p>
+        <p><b>Tameable:</b> ❌</p>
+       <p class="mob-desc">
+           Sinh vật sống ở Nether, thích vàng và có thể trao đổi vật phẩm với người chơi.
+        </p>
+    </div>
+</div>
+
+<!-- Polar Bear -->
+<div class="mob-card" data-bg="images/mob/back_polar_bear.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/polar_bear_egg.png" data-hover="images/mob/polar_bear.png">
+    </div>
+    <div class="mob-name">Polar Bear</div>
+    <div class="mob-hub">
+        <h4>POLAR BEAR</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Snowy Tundra</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+           Gấu Bắc Cực bình thường khá hiền, nhưng cực kỳ hung dữ khi bảo vệ gấu con.
+        </p>
+    </div>
+</div>
+
+<div class="mob-card" data-bg="images/mob/wolf.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/wolf_egg.png" data-hover="images/mob/wolf.png">
+    </div>
+    <div class="mob-name">Wolf</div>
+    <div class="mob-hub">
+        <h4>WOLF</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Forest / Taiga</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">
+            Sói hoang có thể được thuần hóa thành chó trung thành và bảo vệ người chơi.
+        </p>
+    </div>
+</div>
+
+<div class="mob-card" data-bg="images/mob/nautilus.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/nautilus_egg.png" data-hover="images/mob/nautilus.png">
+    </div>
+    <div class="mob-name">Nautilus</div>
+    <div class="mob-hub">
+        <h4>NAUTILUS</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Ocean</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">
+            Sinh vật biển hiếm, gắn liền với vỏ Nautilus dùng để chế tạo Conduit.
+        </p>
+    </div>
+</div>
+
+<div class="mob-card" data-bg="images/mob/zombie_nautilus.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/zombie_nautilus_egg.png" data-hover="images/mob/zombie_nautilus.png">
+    </div>
+    <div class="mob-name">Zombie Nautilus</div>
+    <div class="mob-hub">
+        <h4>ZOMBIE NAUTILUS</h4>
+        <p><b>Type:</b> Neutral</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Ocean Ruins</p>
+        <p><b>Tameable:</b> ✅</p>
+        <p class="mob-desc">
+            Phiên bản zombie hiếm dưới biển, thường mang theo vỏ Nautilus.
+        </p>
+    </div>
+</div>
+
+</div>
+
+
+<!-- ===== HOSTILE MOBS ===== -->
+<div class="mob-grid" id="hostile">
+
+<!-- BLAZE -->
+<div class="mob-card" data-bg="images/mob/blaze.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/blaze_egg.png" data-hover="images/mob/blaze.png">
+    </div>
+    <div class="mob-name">Blaze</div>
+    <div class="mob-hub">
+        <h4>BLAZE</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Nether</p>
+        <p><b>Biome:</b> Nether Fortress</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Bắn cầu lửa, rơi Blaze Rod.</p>
+    </div>
+</div>
+
+<!-- CREEPER -->
+<div class="mob-card" data-bg="images/mob/back_creeper.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/creeper_egg.png" data-hover="images/mob/creeper.png">
+    </div>
+    <div class="mob-name">Creeper</div>
+    <div class="mob-hub">
+        <h4>CREEPER</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Plains / Forest</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Phát nổ khi đến gần người chơi.</p>
+    </div>
+</div>
+
+<!-- SKELETON -->
+<div class="mob-card" data-bg="images/mob/back_skeleton.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/skeleton_egg.png" data-hover="images/mob/skeleton.png">
+    </div>
+    <div class="mob-name">Skeleton</div>
+    <div class="mob-hub">
+        <h4>SKELETON</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Dark areas</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Bắn cung từ xa.</p>
+    </div>
+</div>
+
+<!-- ZOMBIE -->
+<div class="mob-card" data-bg="images/mob/back_zombie.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/zombie_egg.png" data-hover="images/mob/zombie.png">
+    </div>
+    <div class="mob-name">Zombie</div>
+    <div class="mob-hub">
+        <h4>ZOMBIE</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Dark areas</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Tấn công cận chiến, đốt cháy ban ngày.</p>
+    </div>
+</div>
+
+<!-- ===== BREEZE ===== -->
+<div class="mob-card" data-bg="images/mob/breeze.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/breeze_egg.png" data-hover="images/mob/breeze.png">
+    </div>
+    <div class="mob-name">Breeze</div>
+    <div class="mob-hub">
+        <h4>BREEZE</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Trial Chambers</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+            Breeze là mob nguyên tố gió, di chuyển linh hoạt và tấn công bằng luồng gió.
+            Có khả năng đẩy người chơi ra xa và gây sát thương gián tiếp.
+        </p>
+    </div>
+</div>
+
+
+<!-- ===== WARDEN ===== -->
+<div class="mob-card" data-bg="images/mob/warden.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/warden_egg.png" data-hover="images/mob/warden.png">
+    </div>
+    <div class="mob-name">Warden</div>
+    <div class="mob-hub">
+        <h4>WARDEN</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Deep Dark</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">
+            Warden là mob cực mạnh, mù nhưng cảm nhận rung động và âm thanh.
+            Gây sát thương khủng khiếp và có đòn Sonic Boom xuyên tường.
+        </p>
+    </div>
+</div>
+
+
+<!-- PHANTOM -->
+<div class="mob-card" data-bg="images/mob/phantom.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/phantom_egg.png" data-hover="images/mob/phantom.png">
+    </div>
+    <div class="mob-name">Phantom</div>
+    <div class="mob-hub">
+        <h4>PHANTOM</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Sky</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Xuất hiện khi không ngủ nhiều ngày.</p>
+    </div>
+</div>
+
+<!-- WITCH -->
+<div class="mob-card" data-bg="images/mob/back_witch.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/witch_egg.png" data-hover="images/mob/witch.png">
+    </div>
+    <div class="mob-name">Witch</div>
+    <div class="mob-hub">
+        <h4>WITCH</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Swamp</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Dùng potion để chiến đấu.</p>
+    </div>
+</div>
+
+<!-- VINDICATOR -->
+<div class="mob-card" data-bg="images/mob/back_vindicator.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/vindicator_egg.png" data-hover="images/mob/vindicator.png">
+    </div>
+    <div class="mob-name">Vindicator</div>
+    <div class="mob-hub">
+        <h4>VINDICATOR</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Woodland Mansion</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Cầm rìu, sát thương cao.</p>
+    </div>
+</div>
+
+<!-- RAVAGER -->
+<div class="mob-card" data-bg="images/mob/ravager.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/ravager_egg.png" data-hover="images/mob/ravager.png">
+    </div>
+    <div class="mob-name">Ravager</div>
+    <div class="mob-hub">
+        <h4>RAVAGER</h4>
+        <p><b>Type:</b> Hostile</p>
+        <p><b>Dimension:</b> Overworld</p>
+        <p><b>Biome:</b> Raids</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Quái vật lớn trong raid.</p>
+    </div>
+</div>
+</div>
+
+<!-- ===== BOSS MOBS ===== -->
+<div class="mob-grid" id="boss">
+
+<!-- ENDER DRAGON -->
+<div class="mob-card" data-bg="images/mob/ender_dragon.gif">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/ender_dragon_egg.png" data-hover="images/mob/ender_dragon.png">
+    </div>
+    <div class="mob-name">Ender Dragon</div>
+    <div class="mob-hub">
+        <h4>ENDER DRAGON</h4>
+        <p><b>Type:</b> Boss</p>
+        <p><b>Dimension:</b> The End</p>
+        <p><b>Biome:</b> End Island</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Boss cuối cùng của Minecraft.</p>
+    </div>
+</div>
+
+<!-- WITHER -->
+<div class="mob-card" data-bg="images/mob/back_wither.png">
+    <div class="mob-face">
+        <img class="mob-img" src="images/egg/wither_egg.png" data-hover="images/mob/wither.png">
+    </div>
+    <div class="mob-name">Wither</div>
+    <div class="mob-hub">
+        <h4>WITHER</h4>
+        <p><b>Type:</b> Boss</p>
+        <p><b>Dimension:</b> Overworld / Nether</p>
+        <p><b>Biome:</b> Player-summoned</p>
+        <p><b>Tameable:</b> ❌</p>
+        <p class="mob-desc">Boss triệu hồi, rơi Nether Star.</p>
+    </div>
+</div>
+
+</div>
+
+
+</main>
+<!-- ===== SLIDE SCRIPT (2s) ===== -->
+<script>
+let timers = new WeakMap();
+
+document.querySelectorAll(".armor-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const detail = card.querySelector(".slide-mode");
+        if (!detail) return;
+
+        const items = detail.querySelectorAll(".armor-item");
+
+        if (card.classList.contains("active")) {
+            card.classList.remove("active");
+            items.forEach(i => i.classList.remove("active"));
+            clearInterval(timers.get(card));
+            return;
+        }
+
+        card.classList.add("active");
+
+        let index = 0;
+        items[index].classList.add("active");
+
+        const timer = setInterval(() => {
+            items[index].classList.remove("active");
+            index = (index + 1) % items.length;
+            items[index].classList.add("active");
+        }, 2000);
+
+        timers.set(card, timer);
+    });
+});
+</script>
+
+<script>
+document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+        document.querySelectorAll(".mob-wrapper").forEach(w => w.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.dim).classList.add("active");
+    });
+});
+</script>
+
+<script>
+/* TAB SWITCH */
+document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+        document.querySelectorAll(".mob-grid").forEach(g => g.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.type).classList.add("active");
+    });
+});
+
+/* EGG → MOB FACE */
+document.querySelectorAll(".mob-img").forEach(img => {
+    const hover = img.dataset.hover;
+    const original = img.src;
+
+    img.parentElement.addEventListener("mouseenter", () => {
+        if (hover) img.src = hover;
+    });
+
+    img.parentElement.addEventListener("mouseleave", () => {
+        img.src = original;
+    });
+});
+</script>
+
+<script>
+document.querySelectorAll(".mob-card").forEach(card => {
+    let hoverTimer = null;
+
+    card.addEventListener("mouseenter", () => {
+        hoverTimer = setTimeout(() => {
+            card.classList.add("show-hub");
+        }, 1000); // 👈 3 giây
+    });
+
+    card.addEventListener("mouseleave", () => {
+        clearTimeout(hoverTimer);
+        card.classList.remove("show-hub");
+    });
+});
+</script>
+
+<script>
+document.querySelectorAll(".mob-card").forEach(card => {
+    const bg = card.dataset.bg;
+    if (!bg) return;
+
+    const hub = card.querySelector(".mob-hub");
+    hub.style.setProperty("--mob-bg", `url('${bg}')`);
+});
+</script>
+
+<footer class="site-footer" id="sitemap">
+    <div class="footer-text">
+        © 2026 - Web giới thiệu Modpack Minecraft
+    </div>
+
+    <div class="map-footer">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.966127888972!2d106.6032147737362!3d10.813904058503981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1sen!2s!4v1769586740682!5m2!1sen!2s"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</footer>
+</div>
+</body>
+</html>
